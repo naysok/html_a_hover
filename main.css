@@ -1,0 +1,91 @@
+/* default */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans Japanese', sans-serif;
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #FFF;
+  color: #333;
+  line-height: 200%;
+}
+
+h1 {
+  line-height: 200%;
+}
+
+a,
+a:link,
+a:visited {
+  padding-right: 5px;
+  padding-left: 5px;
+  color: #333;
+  background-color: #33aaff;
+}
+
+a:hover {
+  background-color: #ff6868;
+}
+
+.image_array {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.image_array a {
+  padding: 0px;
+  background-color: #FFF;
+}
+
+.image_array a:hover {
+  background-color: #ff6868;
+}
+
+.image_array div.image {
+  width: calc(100vw * 0.9 * 0.25);
+  height: calc(100vw * 0.9 * 0.25);
+}
+
+.image_array div.image img {
+  padding: 2%;
+  width: 96%;
+  height: 96%;
+}
+
+
+/* anytime ver */
+
+.image_array_any {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.image_array_any a {
+  padding: 0px;
+  /* background-color: #FFF; */
+}
+
+.image_array_any a:hover {
+  background-color: #ff6868;
+}
+
+.image_array_any div.image {
+  width: calc(100vw * 0.9 * 0.25);
+  height: calc(100vw * 0.9 * 0.25);
+}
+
+.image_array_any div.image img {
+  padding: 2%;
+  width: 96%;
+  height: 96%;
+}
