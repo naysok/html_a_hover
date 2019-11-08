@@ -1,5 +1,9 @@
 /* default */
 
+:root {
+  --time: 0.2s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -33,41 +37,46 @@ a:hover {
   background-color: #ff6868;
 }
 
-.image_array {
+
+/* ----- define ----- */
+
+.image_array,
+.image_array_any,
+.mouse_over_opacity,
+.pop_up_caption {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.image_array a {
-  padding: 0px;
-  background-color: #FFF;
+.image_array div.image,
+.image_array_any div.image,
+.mouse_over_opacity div.image,
+.pop_up_caption div.image {
+  width: calc(100vw * 0.9 * 0.2);
+  height: calc(100vw * 0.9 * 0.2);
 }
 
-.image_array a:hover {
-  background-color: #ff6868;
-}
-
-.image_array div.image {
-  width: calc(100vw * 0.9 * 0.25);
-  height: calc(100vw * 0.9 * 0.25);
-}
-
-.image_array div.image img {
+.image_array div.image img,
+.image_array_any div.image img,
+.mouse_over_opacity div.image img,
+.pop_up_caption div.image img {
   padding: 2%;
   width: 96%;
   height: 96%;
 }
 
+.image_array a:hover,
+.image_array_any a:hover {
+  background-color: #ff6868;
+}
 
-/* anytime ver */
-
-.image_array_any {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: center;
+.image_array a,
+.mouse_over_opacity a,
+.pop_up_caption a {
+  padding: 0px;
+  background-color: transparent;
 }
 
 .image_array_any a {
@@ -75,17 +84,41 @@ a:hover {
   /* background-color: #FFF; */
 }
 
-.image_array_any a:hover {
-  background-color: #ff6868;
+.mouse_over_opacity img:hover {
+  opacity: 0.2;
+  transition-duration: var(--time);
 }
 
-.image_array_any div.image {
-  width: calc(100vw * 0.9 * 0.25);
-  height: calc(100vw * 0.9 * 0.25);
+
+/*  */
+
+figure {
+  position: relative;
+  overflow: hidden;
 }
 
-.image_array_any div.image img {
-  padding: 2%;
-  width: 96%;
-  height: 96%;
+figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: #ffffffaa;
+  -webkit-transition: var(--time);
+  transition: var(--time);
+  opacity: 0;
+}
+
+figcaption p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+figure:hover figcaption {
+  opacity: 1;
 }
