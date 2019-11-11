@@ -17,10 +17,9 @@ body {
   margin-bottom: 50px;
   background-color: #FFF;
   color: #333;
-  line-height: 200%;
 }
 
-h1 {
+h1, h2, h3, p, a {
   line-height: 200%;
 }
 
