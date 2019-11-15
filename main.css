@@ -19,7 +19,11 @@ body {
   color: #333;
 }
 
-h1, h2, h3, p, a {
+h1,
+h2,
+h3,
+p,
+a {
   line-height: 200%;
 }
 
@@ -53,8 +57,8 @@ a:hover {
 .image_array_any div.image,
 .mouse_over_opacity div.image,
 .pop_up_caption div.image {
-  width: calc(100vw * 0.9 * 0.2);
-  height: calc(100vw * 0.9 * 0.2);
+  width: calc(100vw * 0.9 * 0.25);
+  height: calc(100vw * 0.9 * 0.25);
 }
 
 .image_array div.image img,
